@@ -7,12 +7,12 @@ class Elasticsearchhead < Formula
   version '0.19.9' # there's no way to make this Elasticsearch.new.version
 
   def install
-    v = Elasticsearch.new.version
+    v = Elasticsearch019.new.version
     if version != v
       onoe "version=#{version} does not match es version=#{v}"
       exit 1
     end
-    system "/usr/local/Cellar/elasticsearch/#{v}/bin/plugin -install mobz/elasticsearch-head"
+    system "/usr/local/Cellar/elasticsearch019/#{v}/bin/plugin -install mobz/elasticsearch-head"
     (prefix + 'totem').write ""
   end
 end
