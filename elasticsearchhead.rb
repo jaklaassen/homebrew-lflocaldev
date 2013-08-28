@@ -12,7 +12,7 @@ class Elasticsearchhead < Formula
       onoe "version=#{version} does not match es version=#{v}"
       exit 1
     end
-    system "/usr/local/Cellar/elasticsearch019/#{v}/bin/plugin -install mobz/elasticsearch-head"
+    system "/usr/local/Cellar/elasticsearch-019/#{v}/bin/plugin -install mobz/elasticsearch-head"
     (prefix + 'totem').write ""
   end
 end
